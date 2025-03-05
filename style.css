@@ -930,6 +930,9 @@ footer::before {
     color: var(--gray);
     font-size: 0.9rem;
 }
+.footer-logo span p {
+    margin-left: 20px;
+}
 
 /* Responsive Design */
 @media (max-width: 1200px) {

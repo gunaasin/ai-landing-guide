@@ -155,8 +155,10 @@ nav {
 
 .logo-img{
     position: relative;
-    top: 4px;
-    right: 5px;
+    top: 0px;
+    background-color: transparent;
+    right: 2px;
+
 }
 
 .logo-icon::before {
@@ -235,11 +237,10 @@ nav {
 }
 
 .loader .logo {
-    width: 100px;
+    width: 95px;
     position: absolute;
     inset: 0;
     display: grid;
-    border: none;
     place-content: center;
     padding: 1%;
 }
@@ -249,7 +250,9 @@ nav {
 .loader .logo img {
     fill: var(--logo-color);
     width: 100%;
+    background-color: transparent;
     border: none;
+    border-radius: 50px 5px 50px 30px;
     animation: color-change var(--duration) infinite ease-in-out;
 }
 
@@ -870,10 +873,19 @@ footer::before {
     display: flex;
     align-items: center;
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     color: white;
+    margin-top: -2rem;
     margin-bottom: 1rem;
 }
+
+.footer-gemini{
+    position: relative;
+    bottom: -1.3rem;
+    width: 300px;
+}
+
+
 
 .footer-links {
     display: flex;
@@ -905,6 +917,8 @@ footer::before {
 .footer-bottom {
     text-align: center;
     padding-top: 2rem;
+    cursor: pointer;
+    text-decoration: none;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     color: var(--gray);
     font-size: 0.9rem;

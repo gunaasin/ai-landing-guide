@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Assistant | Chrome Extension</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="stars"></div>
+  <div class="stars2"></div>
+  <div class="stars3"></div>
+
+  <header>
+    <nav>
+      <div class="logo">
+        <span class="logo-img-nav"><img src="./img/gemini+g.png" alt=""></span>
+        <span>AI chrome extention</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#installation">Installation</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href=""></a></li>
+        <li>
+          <div class="outer-cont" id="summarizeBtn">
+            <span class="github-icon"></span>
+            <a href="https://github.com/gunaasin/ai-assistant.git" class="github-link-res">GitHub</a>
+          </div>
+
+        </li>
+      </ul>
+    </nav>
+
+    <div class="hero">
+      <div class="hero-content">
+        <h1>AI Research Assistant</h1>
+        <p class="subtitle">Supercharge your browser with Google's most advanced AI</p>
+        <div class="cta-buttons">
+          <a href="https://github.com/gunaasin/ai-assistant.git" class="primary-button">
+            <span class="github-icon"></span>
+            Download from GitHub
+          </a>
+          <a href="#installation" class="secondary-button">Installation Guide</a>
+        </div>
+      </div>
+      <div class="hero-image">
+
+        <div class="loader">
+          <div class="box">
+            <div class="logo">
+              <img src="./img/gemini+g.png" alt="logo" class="logo-img" />
+            </div>
+          </div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="features" class="features">
+    <h2>Powerful AI at your fingertips</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-icon search-icon"></div>
+        <h3>Smart Search</h3>
+        <p>Get instant answers without leaving your current page. Highlight text and get AI-powered insights.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon write-icon"></div>
+        <h3>Smart Saving</h3>
+        <p>Save important content with just a click. Only headings are displayed for a clutter-free experience.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon code-icon"></div>
+        <h3>Content View</h3>
+        <p>Click on saved headings to reveal full content without distractions.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon privacy-icon"></div>
+        <h3>Performance</h3>
+        <p>Optimized for Lightning  speed and efficiency, ensuring smooth browsing.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="installation" class="installation">
+    <h2>Installation Guide</h2>
+    <div class="installation-container">
+      <div class="installation-steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3>Download the Extension</h3>
+            <p>Clone or download the repository from GitHub.</p>
+            <div class="code-block">
+              <code>git clone https://github.com/gunaasin/ai-assistant.git</code>
+              <button class="copy-button" onclick="copyToClipboard(this)">Copy</button>
+            </div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3>Open Chrome Extensions Page</h3>
+            <p>Navigate to <code>chrome://extensions/</code> in your Chrome browser.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h3>Enable Developer Mode</h3>
+            <p>Toggle the <span>"Developer mode"</span>  switch in the top-right corner.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h3>Load the Extension</h3>
+            <p>Click <span> "Load unpacked" </span> and select the extension folder you downloaded.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">5</div>
+          <div class="step-content">
+            <h3>Start Using Gemini AI</h3>
+            <p>The extension icon will appear in your toolbar. Click it to start using Gemini AI Assistant!</p>
+          </div>
+        </div>
+      </div>
+      <div class="installation-preview">
+        <img src="https://images.unsplash.com/photo-1607798748738-b15c40d33d57?q=80&w=1000&auto=format&fit=crop"
+          alt="Chrome Extensions Page">
+        <div class="preview-overlay">
+          <div class="preview-highlight developer-mode"></div>
+          <div class="preview-highlight load-unpacked"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-container">
+      <div class="faq-item">
+        <div class="faq-question">
+          <h3>Is Gemini AI Assistant free to use?</h3>
+          <span class="toggle-icon"></span>
+        </div>
+        <div class="faq-answer">
+          <p>Yes, Gemini AI Assistant is completely free and open-source. You can use all features without any
+            limitations.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          <h3>Does it work on other browsers?</h3>
+          <span class="toggle-icon"></span>
+        </div>
+        <div class="faq-answer">
+          <p>Currently, Gemini AI Assistant is only available for Chrome. Support for Firefox, Edge, and other browsers
+            is coming soon.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          <h3>Do I need a Google account to use it?</h3>
+          <span class="toggle-icon"></span>
+        </div>
+        <div class="faq-answer">
+          <p>No, you don't need a Google account to use the basic features. However, some advanced features may require
+            you to sign in with your Google account.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          <h3>Is my data secure?</h3>
+          <span class="toggle-icon"></span>
+        </div>
+        <div class="faq-answer">
+          <p>Your privacy is our top priority. All processing happens locally on your device whenever possible, and we
+            don't store any of your personal data.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <span class="logo-icon"></span>
+        <span>Gemini AI</span>
+      </div>
+      <div class="footer-links">
+        <div class="footer-column">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#installation">Installation</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Documentation</a></li>
+            <li><a href="#">API</a></li>
+            <li><a href="#">Community</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="https://github.com/gemini-ai-assistant/extension">GitHub</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Discord</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Gemini AI Assistant. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Simple script to handle FAQ toggles
+    document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('click', () => {
+        const faqItem = question.parentElement;
+        faqItem.classList.toggle('active');
+      });
+    });
+
+    // Copy to clipboard function
+    function copyToClipboard(button) {
+      const codeBlock = button.previousElementSibling;
+      const textArea = document.createElement('textarea');
+      textArea.value = codeBlock.textContent;
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textArea);
+
+      button.textContent = 'Copied!';
+      setTimeout(() => {
+        button.textContent = 'Copy';
+      }, 2000);
+    }
+  </script>
+</body>
+
+</html>

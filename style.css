@@ -12,6 +12,10 @@
     --card-border: rgba(142, 45, 226, 0.3);
 }
 
+::selection{
+    background-color: var(--primary-light);
+    color: var(--dark);
+}
 * {
     margin: 0;
     padding: 0;
@@ -636,9 +640,9 @@ nav {
 }
 
 .step-content span{
-    color: #f3ecfb;
+    color: var(--dark);
     padding: 5px;
-    background-color: #bf95ef7d;
+    background-color: var(--primary-light);
 }
 
 .step-content h3 {

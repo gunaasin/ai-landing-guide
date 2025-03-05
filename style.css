@@ -253,6 +253,8 @@ nav {
 
 
 
+
+
 .loader .logo img {
     fill: var(--logo-color);
     width: 100%;
@@ -607,6 +609,40 @@ nav {
     flex: 1;
 }
 
+/* Slider Container */
+
+.installation-preview {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+}
+
+/* Slider Wrapper */
+.homepage-slider {
+    border-radius: 4px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Individual Slides */
+.homepage-slider .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Active Slide */
+.homepage-slider .slide.active {
+    opacity: 1;
+}
+
 .step {
     display: flex;
     margin-bottom: 2rem;
@@ -930,6 +966,7 @@ footer::before {
     color: var(--gray);
     font-size: 0.9rem;
 }
+
 .footer-logo span p {
     margin-left: 20px;
 }
@@ -980,7 +1017,7 @@ footer::before {
         margin-bottom: 2rem;
     }
 
-    
+
 }
 
 @media (max-width: 768px) {
@@ -1154,7 +1191,8 @@ footer::before {
         text-align: center;
         font-size: 1.8rem;
     }
-    .faq h2{
+
+    .faq h2 {
         font-size: 24px;
     }
 
@@ -1186,7 +1224,7 @@ footer::before {
         height: calc(100% - 30px);
         background: linear-gradient(to bottom, var(--primary), transparent);
     }
-    
+
     .installation-steps {
         padding: 0px;
     }

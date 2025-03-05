@@ -12,10 +12,11 @@
     --card-border: rgba(142, 45, 226, 0.3);
 }
 
-::selection{
+::selection {
     background-color: var(--primary-light);
     color: var(--dark);
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -152,13 +153,13 @@ nav {
     position: relative;
 }
 
-.logo-img-nav{
+.logo-img-nav {
     position: relative;
     top: 2px;
     width: 40px;
 }
 
-.logo-img{
+.logo-img {
     position: relative;
     top: 0px;
     background-color: transparent;
@@ -230,7 +231,7 @@ nav {
     z-index: 96;
     border-color: rgba(100, 100, 100, 0.4);
     animation-delay: 0.6s;
-    
+
 }
 
 .loader .box:nth-child(5) {
@@ -238,7 +239,7 @@ nav {
     z-index: 95;
     border-color: rgba(100, 100, 100, 0);
     animation-delay: 0.8s;
-   
+
 }
 
 .loader .logo {
@@ -401,19 +402,20 @@ nav {
     color: #fff;
     transition: all 0.3s ease;
     box-shadow:
-      inset 0px 0px 5px #ffffffa9,
-      inset 0px 35px 30px #0f101c,
-      0px 5px 10px #0f101c;
+        inset 0px 0px 5px #ffffffa9,
+        inset 0px 35px 30px #0f101c,
+        0px 5px 10px #0f101c;
     text-shadow: 1px 1px 1px #0f101c;
-  }
+}
 
-  .outer-cont span{
+.outer-cont span {
     margin-top: 5px;
-  }
-  .outer-cont .github-link-res{
+}
+
+.outer-cont .github-link-res {
     position: relative;
     top: -4px;
-  }
+}
 
 
 .primary-button,
@@ -475,7 +477,7 @@ nav {
 .features {
     padding: 6rem 10%;
     /* background-color: var(--dark); */
-    background: linear-gradient(to bottom, #0c0b17cf,#1b112c95, #070711);
+    background: linear-gradient(to bottom, #0c0b17cf, #1b112c95, #070711);
     position: relative;
     overflow: hidden;
 }
@@ -640,7 +642,7 @@ nav {
     flex: 1;
 }
 
-.step-content span{
+.step-content span {
     color: var(--dark);
     padding: 5px;
     background-color: var(--primary-light);
@@ -884,7 +886,7 @@ footer::before {
     margin-bottom: 1rem;
 }
 
-.footer-gemini{
+.footer-gemini {
     position: relative;
     bottom: -1.3rem;
     width: 300px;
@@ -932,7 +934,7 @@ footer::before {
 /* Responsive Design */
 @media (max-width: 1200px) {
     .hero {
-        flex-direction: column;
+        flex-direction: column-reverse;
         height: auto;
         padding-top: 2rem;
         padding-bottom: 4rem;
@@ -948,8 +950,22 @@ footer::before {
         justify-content: center;
     }
 
+    .loader {
+        --size: 300px;
+    }
+
     .hero-image {
+        margin-bottom: 50px;
+        position: relative;
+        top: -2rem;
         justify-content: center;
+    }
+
+    .loader .logo {
+        position: relative;
+        top: 10px;
+        left: 7px;
+        width: 65px;
     }
 
     .installation-container {
@@ -960,6 +976,8 @@ footer::before {
         order: -1;
         margin-bottom: 2rem;
     }
+
+    
 }
 
 @media (max-width: 768px) {
@@ -995,6 +1013,87 @@ footer::before {
     }
 }
 
+@media (max-width: 624px) {
+    .code-block {
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 8px;
+        padding: 1rem;
+        height: 100px;
+        margin-top: 1rem;
+        position: relative;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        overflow: hidden;
+    }
+
+    .code-block code {
+        position: relative;
+        margin-top: 25px;
+        font-family: 'Courier New', monospace;
+        color: var(--light);
+        font-size: 0.9rem;
+        white-space: nowrap;
+        overflow-x: auto;
+        display: block;
+    }
+
+    nav .logo {
+        text-align: left;
+    }
+
+    .loader {
+        --size: 250px;
+    }
+
+    .hero-image {
+        margin-bottom: 50px;
+        position: relative;
+        top: -1rem;
+        justify-content: center;
+    }
+
+    .loader .logo {
+        position: relative;
+        top: 10px;
+        left: 6px;
+        width: 55px;
+    }
+
+    .installation-steps {
+        padding: 10px;
+    }
+
+    .step {
+        width: 95vw;
+    }
+
+    .step-content {
+        padding: 0px 30px;
+        position: relative;
+        left: 30px;
+    }
+
+    .footer-logo span p {
+        margin-left: 20px;
+    }
+
+    .firstInfo {
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin: 10px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        position: relative;
+        top: 50px;
+    }
+
+}
+
 @media (max-width: 480px) {
     .hero h1 {
         font-size: 2.5rem;
@@ -1012,6 +1111,7 @@ footer::before {
     }
 
     .step {
+        left: -10px;
         flex-direction: column;
     }
 
@@ -1024,25 +1124,88 @@ footer::before {
         left: 25px;
         top: 50px;
     }
+
+    .hero {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2rem 6%;
+    }
+
+    .features {
+        padding: 6rem 6%;
+    }
+
+    /* FAQ Section */
+    .faq {
+        padding: 6rem 6%;
+        background: linear-gradient(to bottom, #070711, #141121);
+    }
+
+    .features h2 {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .installation h2 {
+        text-align: center;
+        font-size: 1.8rem;
+    }
+    .faq h2{
+        font-size: 24px;
+    }
+
+
+    .footer-logo span p {
+        font-size: 16px;
+    }
+
+    .step-content {
+        padding: 0px 15px;
+        position: relative;
+        left: 25px;
+    }
+
+    .step-number {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+    }
+
+    .step:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        top: 30px;
+        left: 15px;
+        width: 1px;
+        height: calc(100% - 30px);
+        background: linear-gradient(to bottom, var(--primary), transparent);
+    }
+    
+    .installation-steps {
+        padding: 0px;
+    }
 }
 
-  /* width */
-  ::-webkit-scrollbar {
+/* width */
+::-webkit-scrollbar {
     width: 10px;
     border-radius: 10px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #4d4d4d; 
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #888; 
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555; 
-  }
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #4d4d4d;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
